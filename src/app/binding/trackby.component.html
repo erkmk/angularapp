@@ -1,0 +1,51 @@
+<h4 style="text-align: center;">{{SampleMessage}}</h4>
+<div class="row">
+        <div class="col-12 col-md-12">
+        <div class="card">
+                 <div class="card-body position-relative">
+                  <div class="table-responsive cnstr-record product-tbl">
+                   <table class="table table-bordered heading-hvr">
+                        <thead>
+                            <tr>
+                                <th width="50">Art.No </th>
+                                
+                                <th>Brand</th>
+                                
+                                <th>Price/Unit</th>
+                  
+                                <th>Provider</th>
+                          
+                                <th>P. Art. N</th>
+                             
+                                <th>S. A/C</th>
+                                
+                            </tr>
+                            
+                        </thead>
+                      
+                        <tbody>
+                        
+                            <tr *ngFor="let product of companyProduct; trackBy:trackByArtNo">
+                                <td align="center">{{product.ArtNo}}</td>
+                                 <td>{{product.Brand}}</td>
+                                 <td>{{product.Price }}</td>
+                                 <td>{{product.Provider}}</td>
+                                <td>{{product.ProviderArtNo}}</td>
+                               <td>{{product.SalesAccount}}</td>
+                            </tr>
+                        
+                        </tbody>
+                    
+                    </table>
+                    
+                    <button (click)='getNewCompanies()'>New Companies</button>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>

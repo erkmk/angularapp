@@ -1,0 +1,26 @@
+<h2 class="bg-success">Data Binding</h2>
+<h4>Welcome to {{company}}</h4>
+Username:
+<input type="text" id="text1" [(ngModel)]="username">
+{{username | uppercase}}
+
+<br/>
+<h3 class="text-danger">Click to choose account type</h3>
+<li *ngFor="let item of items let i=index trackBy:trackById" (click)="onItemClicked(item)">
+{{i+1}} - {{item.name}} - {{item.balance}}
+</li>
+
+<div *ngIf="clicked; then show else warn"></div>
+<ng-template #warn>
+<h3 class="text-danger">
+    Please select your account type!
+</h3>
+</ng-template>
+
+<ng-template #show>
+    You have Selected: <input type="text" [(ngModel)]="clickedItem.name">
+</ng-template>
+
+<button [disabled]="buttonStatus" (click)="save($event)">
+    Open your account
+</button>

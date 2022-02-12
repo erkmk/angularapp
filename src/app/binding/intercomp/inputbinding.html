@@ -1,0 +1,9 @@
+<div class="container">
+    <h2 class="bg-info">Stock Exchange</h2>
+    <input type="text" placeholder="Enter company name" (change)="onInputEvent($event)">
+<br/>
+<div>Stock is :{{stock}}</div>
+
+<order-processor [stockSymbol]="stock" quantity="100"></order-processor>
+<timer-comp></timer-comp>
+</div>
