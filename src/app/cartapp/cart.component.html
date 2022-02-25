@@ -1,0 +1,29 @@
+<div class="well">
+    <div *ngIf="status; then show else warn"></div>
+
+    <ng-template #show>
+        <h1 class="bg-danger"> Cart List </h1>
+        <h2 class='text-dark'>Select any item</h2>
+
+        <div *ngFor="let product of products" 
+                (click)="selectedProduct(product)">
+            <a style="margin:10px" href="#">
+                <h4 class='text-danger'>{{product.name}}</h4>
+                <button class="bg bg-primary">Add to Cart</button>
+            </a>
+        </div>
+        <div style="background-color:yellow" class='well'>
+            <show-cart [cartData]="cartData"></show-cart>
+        </div>
+
+        <div style="background-color:yellow" class='well'>
+            <app-product [product]="selected"></app-product>
+        </div>
+    </ng-template>
+
+    <ng-template #warn>
+        <h1 class="container text-danger text-center">
+            Sorry.. Can not fetch Contacts........
+        </h1>
+    </ng-template>
+</div>
