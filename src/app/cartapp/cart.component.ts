@@ -3,6 +3,23 @@ import { Product } from './services/product';
 import { ProductServices } from './services/product.service';
 
 
+
+
+
+// @Component({
+//     selector: 'cart-bucket',
+//     template: `
+    
+//     `
+// })
+
+// export class NameComponent implements OnInit {
+//     constructor() { }
+
+//     ngOnInit() { }
+// }
+
+
 @Component({
     selector: 'app-cart',
     templateUrl:'./cart.component.html'

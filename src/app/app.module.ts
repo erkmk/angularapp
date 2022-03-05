@@ -1,6 +1,12 @@
 import { ApplicationRef, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+
+import { ReactiveFormsModule } from '@angular/forms';
+
+//http
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BindingComponent } from './binding/binding.component';
@@ -10,22 +16,43 @@ import { DIModule } from './di/di.module';
 import { ChildComponent, LifeCycleComponent } from './lifecycle/complifecycle';
 import { ContactModule } from './multi-comp/contact.module';
 import { CartModule } from './cartapp/cart.module';
+import { HttpComponent } from './http/http.component';
+import { WeatherComponent } from './http/weather.component';
+import {AgGridModule} from 'ag-grid-angular';
+import { AgGridComponent } from './http/aggrid.component';
+import { SPAModule } from 'src/spa/spa.module';
+import { HomeComponent } from './home/home.component';
+import { NotifyComponent } from './notify.component';
+import { OtherComponent } from './other.component';
+import { WorkerComponent } from './worker/worker.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BindingComponent,
     TrackbyComponent,
-    LifeCycleComponent,ChildComponent
+    LifeCycleComponent,
+    ChildComponent,
+    HttpComponent,
+    WeatherComponent,
+    AgGridComponent,
+    HomeComponent,
+    NotifyComponent,
+    OtherComponent,
+    WorkerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    AgGridModule.withComponents([]),
     IntercompModule,
     DIModule,
     ContactModule,
-    CartModule
+    CartModule,
+    SPAModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

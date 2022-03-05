@@ -1,0 +1,9 @@
+<div id="first" class="container bg-info">
+    <button (click)="longLoop()">
+        Start Long Process
+    </button>
+    <div class="bg-warning">
+        <textarea rows="20" [ngModel]="longProcessOutput">
+        </textarea>
+    </div>
+</div>

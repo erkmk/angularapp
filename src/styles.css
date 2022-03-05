@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import "ag-grid-community/dist/styles/ag-grid.css";
+@import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 50px;
+    line-height: 30px; /* Vertically center the text there */
+    background-color: #2e2e2e;
+  }
+  .footer-text{
+      text-align: center;
+      color: #ccc;
+  }
